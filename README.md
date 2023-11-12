@@ -16,6 +16,7 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 - [Images](#Images)
 - [Generating Public and Private Keys](#Generating-Public-and-Private-Keys)
 - [Contributing](#Contributing)
+- [Acknowledgements](#Acknowledgements)
 - [License](#License)
 
 ## Technologies and Tools
