@@ -71,10 +71,10 @@ $ docker compose up -d --build
 #
 Acces all the platforms using browser via:
 
-- Apache Airflow [localhost:8080](localhost:8080)
-- Apache Kafka [localhost:9021](localhost:9021)
-- Apache Spark [localhost:9090](localhost:9090)
-- Apache Jobs [localhost:4040](localhost:4040)
+- Apache Airflow [localhost:8080](https://localhost:8080)
+- Apache Kafka [localhost:9021](https://localhost:9021)
+- Apache Spark [localhost:9090](https://localhost:9090)
+- Apache Jobs [localhost:4040](https://localhost:4040)
 #
 
 Run the DAGs in Apache Airflow
