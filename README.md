@@ -12,7 +12,7 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 - [Technologies and Tools](#Technologies-and-Tools)
 - [Architecture](#Architecture)
 - [Installation](#Installation)
-- [Usage](#Usages)
+- [Usage](#Usage)
 - [Images](#Images)
 - [Generating Public and Private Keys](#Generating-Public-and-Private-Keys)
 - [Contributing](#Contributing)
