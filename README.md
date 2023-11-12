@@ -1,7 +1,7 @@
 # Streaming Data Warehouse 
 ## Enigineering thesis | Silesian University of Technology
 
-Streaming data warehouse for stock market data with [Apache Airflow](https://airflow.apache.org/), [Apache Kafka](https://kafka.apache.org/), [Apache Spark](https://spark.apache.org/), [Snowflake](https://www.snowflake.com/en/).
+Streaming data warehouse for stock market data with [Apache Airflow](https://airflow.apache.org/), [Apache Kafka](https://kafka.apache.org/), [Apache Spark](https://spark.apache.org/), [Snowflake](https://www.snowflake.com/en/) and [Apache Cassandra](https://cassandra.apache.org/_/index.html).
 
 ## Description
 
@@ -28,6 +28,7 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 - Apache ZooKeeper
 - Apache Spark 
 - Snowflake 
+- Apache Cassandra
 
 
 ## Architecture
@@ -81,7 +82,7 @@ Acces all the platforms using browser via:
 
 Run the DAGs in Apache Airflow
 - `get_data_from_Yahoo_Finance` - to produce the stock data from [Yahoo Finance](https://finance.yahoo.com/) to Kafka
-- `stream_from_Kafka_to_Spark` - to submit a Spark Job which consumes the messages and streams the data to Snowflake database
+- `stream_from_Kafka_to_Spark` - to submit a Spark Job which consumes the messages and streams the data to Snowflake database and Cassandra database
 
 ## Images
 
