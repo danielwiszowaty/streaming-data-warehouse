@@ -32,7 +32,7 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 
 ## Architecture
 
-![Architecture](images\SDW Architecture.png)
+![SDW_Architecture](images\SDW_Architecture.png)
 
 ## Installation
 
