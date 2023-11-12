@@ -19,7 +19,6 @@ sfOptions = {
     "sfSchema": os.environ.get(SF_SCHEMA),
 }
 
-
 SNOWFLAKE_SOURCE_NAME = "net.snowflake.spark.snowflake"
 
 def create_spark_connection():
