@@ -32,6 +32,8 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 
 ## Architecture
 
+![Architecture](images\SDW Architecture.png)
+
 ## Installation
 
 Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/) via their website.
