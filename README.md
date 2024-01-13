@@ -1,4 +1,5 @@
-# Streaming Data Warehouse 
+# Streaming Data Warehouse
+
 ## Enigineering thesis | Silesian University of Technology
 
 Streaming data warehouse for stock market data with [Apache Airflow](https://airflow.apache.org/), [Apache Kafka](https://kafka.apache.org/), [Apache Spark](https://spark.apache.org/), [Snowflake](https://www.snowflake.com/en/) and [Apache Cassandra](https://cassandra.apache.org/_/index.html).
@@ -9,27 +10,27 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 
 ## Table of Contents
 
-- [Technologies and Tools](#Technologies-and-Tools)
-- [Architecture](#Architecture)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Images](#Images)
-- [Generating Public and Private Keys](#Generating-Public-and-Private-Keys)
-- [Contributing](#Contributing)
-- [Acknowledgements](#Acknowledgements)
-- [License](#License)
+- [Technologies and Tools](#technologies-and-tools)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Images](#images)
+- [Generating Public and Private Keys](#generating-public-and-private-keys)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ## Technologies and Tools
+
 - Docker
 - Python
 - Apache Airflow
 - PostgreSQL
 - Apache Kafka
 - Apache ZooKeeper
-- Apache Spark 
-- Snowflake 
+- Apache Spark
+- Snowflake
 - Apache Cassandra
-
 
 ## Architecture
 
@@ -40,9 +41,10 @@ This engineering thesis, conducted at the Silesian University of Technology, aim
 Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/) via their website.
 
 Run these commands:
+
 ```bash
-$ git clone https://github.com/danielwiszowaty/streaming-data-warehouse.git
-$ cd streaming-data-warehouse
+git clone https://github.com/danielwiszowaty/streaming-data-warehouse.git
+cd streaming-data-warehouse
 ```
 
 ## Usage
@@ -62,25 +64,29 @@ SF_WAREHOUSE=<warehouse_name>
 PKB=<pkb_key>
 ```
 
-pkb_key is necessary to stream the data and can be generated with [Generating Public and Private Keys](#Generating-Public-and-Private-Keys).
-#
+pkb_key is necessary to stream the data and can be generated with [Generating Public and Private Keys](#generating-public-and-private-keys).
 
+#
 
 Run `docker-compose.yaml` using
 
 ```bash
-$ docker compose up -d --build
+docker compose up -d --build
 ```
+
 #
+
 Acces all the platforms using browser via:
 
 - Apache Airflow [localhost:8080](https://localhost:8080)
 - Apache Kafka [localhost:9021](https://localhost:9021)
 - Apache Spark [localhost:9090](https://localhost:9090)
 - Apache Jobs [localhost:4040](https://localhost:4040)
+
 #
 
 Run the DAGs in Apache Airflow
+
 - `get_data_from_Yahoo_Finance` - to produce the stock data from [Yahoo Finance](https://finance.yahoo.com/) to Kafka
 - `stream_from_Kafka_to_Spark` - to submit a Spark Job which consumes the messages and streams the data to Snowflake database and Cassandra database
 
@@ -136,16 +142,14 @@ Generate a PKB key via `utils/generate_key.py` with the password you have provid
 
 Set as a `PKB` variable in `.env` file.
 
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
-
 ## Acknowledgements
 
- - [yfinance library](https://github.com/ranaroussi/yfinance)
+- [yfinance library](https://github.com/ranaroussi/yfinance)
 
 ## License
 
