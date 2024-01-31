@@ -18,8 +18,8 @@ default_args = {
     'owner': 'danielwiszowaty',
     'depends_on_past': False,
     #'start_date': days_ago(0),
-    #'email': ['airflow@example.com'],
-    'email_on_failure': False,
+    'email': ['daniwis272@student.polsl.pl'],
+    'email_on_failure': True,
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
@@ -73,7 +73,7 @@ def get_stock_data_every_minute(companies, period = '1d', interval = '1m'):
     df = transpose_df(tickers.history(period=period, interval=interval))
     
     #Change delta to none for 9-17 data
-    time = get_time_with_timezone(delta=2880)
+    time = get_time_with_timezone(delta=720)
     df = filter_df_based_on_time(df, time)
 
     if not df.empty:

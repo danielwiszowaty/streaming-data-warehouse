@@ -176,3 +176,6 @@ dags/__pycache__/
 *.p8
 *.pub
 /jobs/checkpoint
+/jobs/checkpoint_date
+/jobs/cass_checkpoint
+/jobs/cass_checkpoint_date
