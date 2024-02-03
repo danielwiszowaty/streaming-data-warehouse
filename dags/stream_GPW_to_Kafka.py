@@ -445,6 +445,7 @@ def get_stock_data_every_minute(companies, period = '1d', interval = '1m'):
     df = transpose_df(tickers.history(period=period, interval=interval))
     
     #Change delta to none for 9-17 data
+    #time = get_time_with_timezone(delta=1440)
     time = get_time_with_timezone()
     df = filter_df_based_on_time(df, time)
 
@@ -475,8 +476,6 @@ def check_GPW_hours():
     now = datetime.now()
     return (now.hour == 9 and now.minute >= 15) or (now.hour > 9 and now.hour < 17) or (now.hour == 17 and now.minute <= 15)
     return True
-
-stream_data_to_kafka()
     
 my_dag = DAG('get_data_from_Yahoo_Finance',
     default_args=default_args,
